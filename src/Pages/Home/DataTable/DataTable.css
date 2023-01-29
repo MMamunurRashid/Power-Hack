@@ -1,0 +1,20 @@
+.pagination {
+  margin: auto;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  text-align: center;
+}
+.pagination button {
+  margin-right: 10px;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid lightslategrey;
+}
+.pagination button:hover {
+  background-color: #ff9900;
+}
+.pagination .selected {
+  background-color: goldenrod;
+  font-weight: bold;
+  border: none;
+}
