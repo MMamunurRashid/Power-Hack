@@ -24,7 +24,7 @@ const Register = () => {
 
   const saveUserInDb = (name, email, password) => {
     const user = { name, email, password };
-    fetch(`http://localhost:5000/registration`, {
+    fetch(`https://power-hack-server-chi.vercel.app/registration`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

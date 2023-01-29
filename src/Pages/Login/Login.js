@@ -20,7 +20,7 @@ const Login = () => {
   };
   const saveUserInDb = (email, password) => {
     const user = { email, password };
-    fetch(`http://localhost:5000/login`, {
+    fetch(`https://power-hack-server-chi.vercel.app/login`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

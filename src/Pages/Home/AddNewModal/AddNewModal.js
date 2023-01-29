@@ -21,7 +21,7 @@ const AddNewModal = ({ refetch, setAddModal, addModal }) => {
       phone,
       paidAmount,
     };
-    fetch("http://localhost:5000/add-billing", {
+    fetch("https://power-hack-server-chi.vercel.app/add-billing", {
       method: "POST",
       headers: {
         "content-type": "application/json",

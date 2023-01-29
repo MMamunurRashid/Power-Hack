@@ -18,7 +18,7 @@ const DataTable = () => {
     queryKey: ["tableData", page],
     queryFn: async () => {
       const res = await fetch(
-        `http://localhost:5000/billing-list?page=${page}`
+        `https://power-hack-server-chi.vercel.app/billing-list?page=${page}`
       );
       const data = await res.json();
       setCount(data.count);
@@ -37,7 +37,7 @@ const DataTable = () => {
       phone,
       paidAmount,
     };
-    fetch(`http://localhost:5000/update-billing/${id}`, {
+    fetch(`https://power-hack-server-chi.vercel.app/update-billing/${id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -63,7 +63,7 @@ const DataTable = () => {
       "Are you sure, you want to delete the Bill?"
     );
     if (proceed) {
-      fetch(`http://localhost:5000/delete-billing/${id}`, {
+      fetch(`https://power-hack-server-chi.vercel.app/delete-billing/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
@@ -127,9 +127,9 @@ const DataTable = () => {
                   <label
                     htmlFor="my-modal"
                     onClick={() => handleUpdate(data._id)}
-                    className="btn"
+                    className="btn btn-sm"
                   >
-                    open modal
+                    update
                   </label>
                 </td>
                 <td>
