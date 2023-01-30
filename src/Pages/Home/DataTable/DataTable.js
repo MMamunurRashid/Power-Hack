@@ -6,8 +6,9 @@ import AddNewModal from "../AddNewModal/AddNewModal";
 import UpdateModal from "../UpdateModal/UpdateModal";
 import "./DataTable.css";
 
-const DataTable = () => {
+const DataTable = ({ search }) => {
   // const [dataTable, setDataTable] = useState([]);
+  // console.log(search);
   const [addModal, setAddModal] = useState([]);
   const [count, setCount] = useState(0);
   const [page, setPage] = useState(0);
@@ -18,7 +19,7 @@ const DataTable = () => {
     queryKey: ["tableData", page],
     queryFn: async () => {
       const res = await fetch(
-        `https://power-hack-server-chi.vercel.app/billing-list?page=${page}`
+        `http://localhost:5000/billing-list?search=${search}&page=${page}`
       );
       const data = await res.json();
       setCount(data.count);
